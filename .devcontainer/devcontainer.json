@@ -16,7 +16,6 @@
 			"dockerDashComposeVersion": "none"
 		},
 		"ghcr.io/rocker-org/devcontainer-features/apt-packages:1": {
-			"upgradePackages": true,
 			"packages": ""
 		},
 		"ghcr.io/devcontainers-contrib/features/ansible:2": {
@@ -25,7 +24,10 @@
 		"ghcr.io/devcontainers-contrib/features/powershell:1": {
 			"version": "latest"
 		},
-		"ghcr.io/joshuanianji/devcontainer-features/terraform-cli-persistence:0": {}
+		"ghcr.io/devcontainers-contrib/features/terraform-asdf:2": {
+			"version": "latest"
+		}
+		
 	},
 
 	
