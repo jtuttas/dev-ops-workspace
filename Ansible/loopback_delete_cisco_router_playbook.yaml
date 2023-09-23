@@ -1,0 +1,23 @@
+---
+- name: DELETE LOOPBACK
+  hosts: CSR1kv
+  gather_facts: false
+  connection: local
+
+  tasks:
+   - name: Delete loopback 12
+     ios_interface:
+       name: Loopback12
+       state: absent
+
+   - name: DISPLAYING THE RUNNING-CONFIG
+     ios_command:
+       commands:
+         - show running-config  
+     register: config
+ 
+   - name: SAVE OUTPUT TO ./backups/
+     copy:
+       content: "{{ config.stdout[0] }}"
+       dest: "backups/show_run_noLoopback_{{ inventory_hostname }}.txt"
+
