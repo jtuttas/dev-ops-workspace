@@ -33,7 +33,9 @@
 				"redhat.vscode-xml",
 				"redhat.vscode-yaml",
                 "ms-azuretools.vscode-docker",
-                "redhat.ansible"
+                "redhat.ansible",
+				"humao.rest-client"
+
 
 			]
 		}

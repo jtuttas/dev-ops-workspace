@@ -1,0 +1,6 @@
+{
+    "editor.fontSize": 14,
+    "workbench.colorTheme": "Dracula",
+    "workbench.iconTheme": "material-icon-theme",
+    "python.defaultInterpreterPath": "/usr/local/bin/python"
+}
