@@ -16,7 +16,7 @@
 			"dockerDashComposeVersion": "none"
 		},
 		"ghcr.io/rocker-org/devcontainer-features/apt-packages:1": {
-			"packages": ""
+			"packages": "mc"
 		},
 		"ghcr.io/devcontainers-contrib/features/ansible:2": {
 			"version": "latest"
