@@ -50,7 +50,8 @@
 				"redhat.vscode-yaml",
                 "ms-azuretools.vscode-docker",
                 "redhat.ansible",
-				"humao.rest-client"
+				"humao.rest-client",
+				"hashicorp.terraform"
 
 
 			]
