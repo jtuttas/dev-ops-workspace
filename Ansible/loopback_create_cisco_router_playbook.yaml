@@ -1,12 +1,11 @@
 ---
 - name: CREATE LOOPBACK
-  hosts: CSR1kv
-  gather_facts: false
-  connection: local
+  hosts: ios
+  gather_facts: no
  
   tasks:
    - name: Creating loopback 
-     ios_l2_interfaces:
+     ios_interfaces:
        name: Loopback12
        enabled: True
        description: Loopback interface 12 created with Ansible
