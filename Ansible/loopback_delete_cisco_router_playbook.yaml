@@ -1,12 +1,11 @@
 ---
 - name: DELETE LOOPBACK
-  hosts: CSR1kv
-  gather_facts: false
-  connection: local
+  hosts: ios
+  gather_facts: no
 
   tasks:
    - name: Delete loopback 12
-     ios_l2_interfaces:
+     ios_interfaces:
        name: Loopback12
        state: absent
 
