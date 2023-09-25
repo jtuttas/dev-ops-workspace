@@ -6,7 +6,7 @@
  
   tasks:
    - name: Creating loopback 
-      ios_l2_interfaces:
+     ios_l2_interfaces:
        name: Loopback12
        enabled: True
        description: Loopback interface 12 created with Ansible
