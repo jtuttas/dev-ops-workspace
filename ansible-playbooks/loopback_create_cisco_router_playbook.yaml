@@ -1,0 +1,27 @@
+---
+- name: CREATE LOOPBACK
+  hosts: ios
+  gather_facts: no
+ 
+  tasks:
+   - name: Creating loopback 
+     ios_interfaces:
+       name: Loopback12
+       enabled: True
+       description: Loopback interface 12 created with Ansible
+   
+   - name: Assign IP to loopback
+     ios_l3_interfaces:
+       name: Loopback12
+       ipv4: 1.2.3.4/32
+  
+   - name: DISPLAYING THE RUNNING-CONFIG
+     ios_command:
+       commands:
+         - show running-config  
+     register: config
+ 
+   - name: SAVE OUTPUT TO ./backups/
+     copy:
+       content: "{{ config.stdout[0] }}"
+       dest: "backups/show_run_loopback{{ inventory_hostname }}.txt"
