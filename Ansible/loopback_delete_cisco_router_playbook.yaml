@@ -6,7 +6,7 @@
 
   tasks:
    - name: Delete loopback 12
-     ios_interface:
+     ios_l2_interfaces:
        name: Loopback12
        state: absent
 
