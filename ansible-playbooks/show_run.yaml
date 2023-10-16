@@ -1,0 +1,20 @@
+---
+- name: Abfrage der Running-Config eines Cisco IOS-Routers
+  hosts: ios
+  gather_facts: no
+
+  tasks:
+    - name: Konfigurationsabfrage
+      ios_command:
+        commands:
+          - show running-config
+      register: config_output
+
+    - name: Anzeige der Konfiguration
+      debug:
+        var: config_output.stdout_lines[0]
+
+    - name: Konfiguration nach ./backups/ speichern
+      copy:
+        content: "{{ config_output.stdout[0] }}"
+        dest: "backups/show_run_loopback{{ inventory_hostname }}.txt"
